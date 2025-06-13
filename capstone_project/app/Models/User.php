@@ -15,6 +15,7 @@ class User extends Authenticatable
         'email',
         'password',
         'role',
+         'gender',
         'first_login',
         'assigned_teacher_id',
     ];
@@ -32,15 +33,23 @@ class User extends Authenticatable
         ];
     }
 
-    // ✅ For teachers: get all students assigned to them
+    //  For teachers: get all students assigned to them
     public function students()
     {
         return $this->hasMany(User::class, 'assigned_teacher_id');
     }
 
-    // ✅ For students: get their assigned teacher
+    //  For students: get their assigned teacher
     public function assignedTeacher()
     {
         return $this->belongsTo(User::class, 'assigned_teacher_id');
     }
+    // For Admin table
+    public function teacher()
+    {
+        return $this->belongsTo(User::class, 'assigned_teacher_id');
+    }
+
+    
+
 }

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('role')->default('student-parent');
+            $table->string('gender')->nullable();
             $table->boolean('first_login')->default(true);
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
