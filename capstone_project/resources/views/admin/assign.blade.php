@@ -1,14 +1,14 @@
 <x-app-layout>
     <div class="max-w-5xl mx-auto mt-8 bg-white rounded-lg shadow-lg overflow-hidden">
         <!-- Header Section -->
-        <div class="bg-gradient-to-r from-pink-500 to-pink-600 px-6 py-4">
+        <div class="bg-gradient-to-r from-red-800 to-red-900 px-6 py-4">
             <h2 class="text-2xl font-bold text-white flex items-center">
                 <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
                 </svg>
                 Assign Students to Teachers
             </h2>
-            <p class="text-pink-100 mt-1">Manage student-teacher assignments efficiently</p>
+            <p class="text-red-100 mt-1">Manage student-teacher assignments efficiently</p>
         </div>
 
         <div class="p-6 space-y-6">
@@ -27,7 +27,7 @@
             <!-- Assignment Form -->
             <div class="bg-gray-50 rounded-lg p-6">
                 <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                    <svg class="w-5 h-5 mr-2 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 mr-2 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                     </svg>
                     Create New Assignment
@@ -40,7 +40,7 @@
                             <label for="student_id" class="block text-sm font-medium text-gray-700">Select Student</label>
                             <div class="relative">
                                 <select name="student_id" id="student_id" required 
-                                        class="w-full p-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 bg-white appearance-none transition-colors">
+                                        class="w-full p-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-red-600 bg-white appearance-none transition-colors">
                                     <option value="">Choose a student...</option>
                                     @foreach($students as $student)
                                         <option value="{{ $student->id }}">{{ $student->name }}</option>
@@ -56,7 +56,7 @@
                             <label for="teacher_id" class="block text-sm font-medium text-gray-700">Select Teacher</label>
                             <div class="relative">
                                 <select name="teacher_id" id="teacher_id" required 
-                                        class="w-full p-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 bg-white appearance-none transition-colors">
+                                        class="w-full p-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-red-600 bg-white appearance-none transition-colors">
                                     <option value="">Choose a teacher...</option>
                                     @foreach($teachers as $teacher)
                                         <option value="{{ $teacher->id }}">{{ $teacher->name }}</option>
@@ -70,7 +70,7 @@
                     </div>
 
                     <button type="submit" 
-                            class="inline-flex items-center px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 shadow-sm">
+                            class="inline-flex items-center px-6 py-3 bg-red-700 hover:bg-red-800 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 shadow-sm">
                         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                         </svg>
@@ -83,7 +83,7 @@
             <div class="bg-white">
                 <div class="flex items-center justify-between mb-4">
                     <h3 class="text-lg font-semibold text-gray-800 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 mr-2 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
                         </svg>
                         Current Assignments
@@ -95,19 +95,19 @@
 
                 <div class="overflow-hidden rounded-lg border border-gray-200 shadow-sm">
                     <table class="w-full">
-                        <thead class="bg-gradient-to-r from-pink-50 to-pink-100">
+                        <thead class="bg-gradient-to-r from-red-50 to-red-100">
                             <tr>
-                                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-800 border-b border-pink-200">
+                                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-800 border-b border-red-200">
                                     <div class="flex items-center">
-                                        <svg class="w-4 h-4 mr-2 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <svg class="w-4 h-4 mr-2 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                                         </svg>
                                         Student Name
                                     </div>
                                 </th>
-                                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-800 border-b border-pink-200">
+                                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-800 border-b border-red-200">
                                     <div class="flex items-center">
-                                        <svg class="w-4 h-4 mr-2 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <svg class="w-4 h-4 mr-2 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                                         </svg>
                                         Assigned Teacher

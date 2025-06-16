@@ -5,7 +5,7 @@
             <div class="flex items-center justify-between">
                 <div>
                     <h1 class="text-3xl font-bold text-pink-900 mb-2">
-                        Welcome back, {{ Auth::user()->name }} 🌸
+                        Welcome back, {{ Auth::user()->name }} 🖥️
                     </h1>
                     <p class="text-pink-700 text-lg">Manage your school community with ease</p>
                 </div>
@@ -58,9 +58,9 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <!-- Recent Users Table -->
-            <div class="lg:col-span-2">
+             <div class="lg:col-span-2">
                 <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-                    <div class="bg-gradient-to-r from-pink-500 to-rose-500 p-6">
+                    <div class="bg-gradient-to-r from-red-700 to-red-800 p-6">
                         <h2 class="text-xl font-bold text-white flex items-center">
                             <span class="mr-2">📊</span>
                             Recently Registered Users
@@ -84,14 +84,14 @@
                                             <div class="flex items-center">
                                                 <img src="{{ $user->profile_photo ? asset('storage/' . $user->profile_photo) : asset('storage/images/default-profile.png') }}" 
                                                      alt="{{ $user->name }}" 
-                                                     class="w-8 h-8 rounded-full object-cover mr-3 border-2 border-pink-200">
+                                                     class="w-8 h-8 rounded-full object-cover mr-3 border-2 border-red-200">
                                                 <span class="font-medium text-gray-900">{{ $user->name }}</span>
                                             </div>
                                         </td>
                                         <td class="p-4 text-gray-600">{{ $user->email }}</td>
                                         <td class="p-4">
                                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium 
-                                                {{ $user->role === 'teacher' ? 'bg-pink-100 text-pink-800' : 'bg-purple-100 text-purple-800' }}">
+                                                {{ $user->role === 'teacher' ? 'bg-red-100 text-red-800' : 'bg-red-100 text-red-800' }}">
                                                 {{ ucfirst($user->role) }}
                                             </span>
                                         </td>
@@ -123,7 +123,7 @@
                     
                     <div class="space-y-4">
                         <a href="{{ route('admin.register.form') }}" 
-                           class="group block w-full bg-gradient-to-r from-pink-500 to-rose-500 text-white px-6 py-4 rounded-xl text-center font-semibold shadow-lg hover:from-pink-600 hover:to-rose-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">
+                           class="group block w-full bg-gradient-to-r from-red-700 to-red-800 text-white px-6 py-4 rounded-xl text-center font-semibold shadow-lg hover:from-red-800 hover:to-red-900 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">
                             <div class="flex items-center justify-center">
                                 <span class="text-xl mr-2 group-hover:scale-110 transition-transform">➕</span>
                                 Register New User
@@ -131,7 +131,7 @@
                         </a>
 
                         <a href="{{ route('admin.assign.form') }}" 
-                           class="group block w-full bg-gradient-to-r from-pink-400 to-rose-400 text-white px-6 py-4 rounded-xl text-center font-semibold shadow-lg hover:from-pink-500 hover:to-rose-500 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">
+                           class="group block w-full bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-4 rounded-xl text-center font-semibold shadow-lg hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">
                             <div class="flex items-center justify-center">
                                 <span class="text-xl mr-2 group-hover:scale-110 transition-transform">🎓</span>
                                 Assign Students to Teachers
@@ -140,7 +140,7 @@
 
                         <div class="pt-4 border-t border-gray-100">
                             <a href="{{ route('profile.edit') }}" 
-                               class="group block w-full text-pink-700 px-6 py-3 rounded-xl text-center font-medium hover:bg-pink-50 transition-all duration-300 border-2 border-pink-200 hover:border-pink-300">
+                               class="group block w-full text-red-700 px-6 py-3 rounded-xl text-center font-medium hover:bg-red-50 transition-all duration-300 border-2 border-red-200 hover:border-red-300">
                                 <div class="flex items-center justify-center">
                                     <span class="text-lg mr-2 group-hover:scale-110 transition-transform">⚙️</span>
                                     Edit Profile
@@ -155,7 +155,7 @@
                         <div class="space-y-2">
                             <div class="flex justify-between items-center">
                                 <span class="text-sm text-gray-600">Active Today</span>
-                                <span class="text-sm font-semibold text-pink-600">{{ $totalUsers }}</span>
+                                <span class="text-sm font-semibold text-red-600">{{ $totalUsers }}</span>
                             </div>
                             <div class="flex justify-between items-center">
                                 <span class="text-sm text-gray-600">This Month</span>

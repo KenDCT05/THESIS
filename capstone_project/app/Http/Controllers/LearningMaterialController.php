@@ -22,7 +22,7 @@ class LearningMaterialController extends Controller
      */
     public function create()
     {
-        return view('materials.add-material'); // clean view for form only
+        return view('materials.add-material'); 
     }
 
     /**
